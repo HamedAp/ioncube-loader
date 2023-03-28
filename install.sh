@@ -1,4 +1,3 @@
-apt update -y 
 wget -4 https://downloads.ioncube.com/loader_downloads/ioncube_loaders_lin_x86-64.tar.gz
 sudo tar xzf ioncube_loaders_lin_x86-64.tar.gz -C /usr/local
 sudo rm -rf ioncube_loaders_lin_x86-64.tar.gz
