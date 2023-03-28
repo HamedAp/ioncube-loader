@@ -1,6 +1,6 @@
 apt update -y 
 apt upgrade -y
-wget -4 http://downloads3.ioncube.com/loader_downloads/ioncube_loaders_lin_x86-64.tar.gz
+wget -4 https://downloads.ioncube.com/loader_downloads/ioncube_loaders_lin_x86-64.tar.gz
 sudo tar xzf ioncube_loaders_lin_x86-64.tar.gz -C /usr/local
 sudo rm -rf ioncube_loaders_lin_x86-64.tar.gz
 PHPVERSION=$(php -i | grep /.+/php.ini -oE | sed 's/[^0-9.]*//g')
