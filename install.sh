@@ -9,7 +9,7 @@ systemctl restart apache2
 elif command -v yum >/dev/null; then
 wget -4 https://downloads.ioncube.com/loader_downloads/ioncube_loaders_lin_x86-64.tar.gz
 sudo tar xzf ioncube_loaders_lin_x86-64.tar.gz -C /usr/lib64/php/modules
-echo "zend_extension = zend_extension = /usr/lib64/php/modules/ioncube/ioncube_loader_lin_7.4.so" > /etc/php.d
+echo "zend_extension = zend_extension = /usr/lib64/php/modules/ioncube/ioncube_loader_lin_7.4.so" > /etc/php.d/00-ioncube.ini
 systemctl restart httpd
 
 
