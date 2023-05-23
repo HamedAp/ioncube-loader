@@ -26,7 +26,6 @@ if [ $(uname -m) = "aarch64" ]; then
 sudo rm -rf ioncube_loaders_lin_aarch64.tar.gz
 PHPVERSION=$(php -i | grep /.+/php.ini -oE | sed 's/[^0-9.]*//g')
 echo "zend_extension = /usr/lib/php/20210902/ioncube/ioncube_loader_lin_${PHPVERSION}so" > /etc/php/${PHPVERSION::-1}/apache2/conf.d/00-ioncube.ini
-sed -i 's@zend_extension = /usr/lib/php/20210902/ioncube/ioncube_loader_lin_${PHPVERSION}so@@' /etc/php/${PHPVERSION::-1}/cli/php.ini
 echo "zend_extension = /usr/lib/php/20210902/ioncube/ioncube_loader_lin_${PHPVERSION}so" >> /etc/php/${PHPVERSION::-1}/cli/php.ini
 systemctl restart apache2
 fi
